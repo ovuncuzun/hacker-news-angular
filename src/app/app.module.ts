@@ -3,14 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoryFeedComponent } from './components/story-feed/story-feed.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StoryFeedComponent
   ],
   imports: [
+    AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
