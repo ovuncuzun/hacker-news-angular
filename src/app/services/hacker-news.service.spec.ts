@@ -33,9 +33,10 @@ describe('HackerNewsService', () => {
 
   it('#getStory should get story from hackernews api', () => {
     const service: HackerNewsService = TestBed.inject(HackerNewsService);
-    httpClientMock.get.and.returnValue(new Observable((o) => { o.next('test'); }));
+    httpClientMock.get.and.returnValue(new Observable((o) => { o.next({ title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: 789 }); }));
     service.getStory(123).subscribe((data) => {
-      expect(data).toEqual('test');
+      expect(data).toEqual({ title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: 789 });
     });
   });
 });
+
