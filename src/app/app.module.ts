@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoryFeedComponent } from './components/story-feed/story-feed.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { StoryItemComponent } from './components/story-feed/story-item/story-item.component';
 
 @NgModule({
@@ -20,7 +23,11 @@ import { StoryItemComponent } from './components/story-feed/story-item/story-ite
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
-    MatCardModule
+    MatButtonModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatToolbarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

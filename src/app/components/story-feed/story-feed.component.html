@@ -1,6 +1,10 @@
-<div>
+<mat-progress-bar mode="indeterminate" color="accent" *ngIf="loading"></mat-progress-bar>
+<div class="stories-list">
     <ng-container *ngFor="let story of stories">
         <app-story-item [story]="story">
         </app-story-item>
     </ng-container>
+    <div class="load-more-container" *ngIf="moreStoriesAvailable">
+        <button mat-button *ngIf="!loading" (click)="loadStories()">Load more stories</button>
+    </div>
 </div>
