@@ -12,6 +12,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { StoryItemComponent } from './components/story-feed/story-item/story-item.component';
 import { UrlPipe } from './pipes/url.pipe';
+import { HackerNewsService } from './services/hacker-news.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { UrlPipe } from './pipes/url.pipe';
     MatToolbarModule
 
   ],
-  providers: [],
+  providers: [HackerNewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

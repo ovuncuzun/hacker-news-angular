@@ -5,6 +5,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 describe('StoryFeedComponent', () => {
   let component: StoryFeedComponent;
@@ -13,7 +14,7 @@ describe('StoryFeedComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [StoryFeedComponent],
-      imports: [MatProgressBarModule, MatCardModule, HttpClientModule, RouterTestingModule]
+      imports: [MatToolbarModule, MatProgressBarModule, MatCardModule, HttpClientModule, RouterTestingModule]
     })
       .compileComponents();
   });

@@ -2,6 +2,6 @@ export interface Story {
     title: string;
     url: string;
     by: string;
-    time: number;
+    time: string;
     score: number;
 }

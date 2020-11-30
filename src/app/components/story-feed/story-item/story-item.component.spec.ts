@@ -27,7 +27,7 @@ describe('StoryItemComponent', () => {
   });
 
   it('should display story details correctly', () => {
-    component.story = { title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: 123 };
+    component.story = { title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: '123' };
     fixture.detectChanges();
     const nativeElement: HTMLElement = fixture.nativeElement;
     const title = nativeElement.querySelector('mat-card-title')!.textContent;

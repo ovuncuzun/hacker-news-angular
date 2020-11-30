@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 import { Observable } from 'rxjs';
 
@@ -7,6 +7,7 @@ import { HackerNewsService } from './hacker-news.service';
 describe('HackerNewsService', () => {
   const httpClientMock = jasmine.createSpyObj('HttpClient', ['get']);
   beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientModule],
     providers: [
       { provide: HttpClient, useValue: httpClientMock },
     ]
@@ -33,9 +34,9 @@ describe('HackerNewsService', () => {
 
   it('#getStory should get story from hackernews api', () => {
     const service: HackerNewsService = TestBed.inject(HackerNewsService);
-    httpClientMock.get.and.returnValue(new Observable((o) => { o.next({ title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: 789 }); }));
+    httpClientMock.get.and.returnValue(new Observable((o) => { o.next({ title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: '1606750345' }); }));
     service.getStory(123).subscribe((data) => {
-      expect(data).toEqual({ title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: 789 });
+      expect(data).toEqual({ title: 'test', url: 'https://www.google.com', score: 100, by: 'testuser', time: 'about 1 hour ago' });
     });
   });
 });
