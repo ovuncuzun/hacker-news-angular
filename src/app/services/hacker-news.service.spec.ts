@@ -7,7 +7,6 @@ import { HackerNewsService } from './hacker-news.service';
 describe('HackerNewsService', () => {
   const httpClientMock = jasmine.createSpyObj('HttpClient', ['get']);
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientModule],
     providers: [
       { provide: HttpClient, useValue: httpClientMock },
     ]
