@@ -11,12 +11,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { StoryItemComponent } from './components/story-feed/story-item/story-item.component';
+import { UrlPipe } from './pipes/url.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     StoryFeedComponent,
-    StoryItemComponent
+    StoryItemComponent,
+    UrlPipe
   ],
   imports: [
     AppRoutingModule,
