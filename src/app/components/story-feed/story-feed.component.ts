@@ -40,16 +40,13 @@ export class StoryFeedComponent implements OnInit {
         );
       }
       this.loading = true;
-      forkJoin(storiesList).subscribe(
-        (moreStories) => {
-          this.stories = [...this.stories, ...moreStories];
-          this.loading = false;
-          this.nextStoryIndex = this.nextStoryIndex + 10;
-        },
-        () => {
-          this.loading = false;
-        }
-      );
+      forkJoin(storiesList).subscribe((moreStories) => {
+        this.stories = [...this.stories, ...moreStories];
+        this.loading = false;
+        this.nextStoryIndex = this.nextStoryIndex + 10;
+      }, () => {
+        this.loading = false;
+      });
     }
   }
 
