@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "hacker-news-angular"
+  "defaultProject": "hacker-news-angular",
+  "cli": {
+    "analytics": "8b668bfe-338e-4a8d-a7f6-0d334dac38d4"
+  }
 }
